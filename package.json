@@ -1,0 +1,13 @@
+{
+  "name": "sm-studio-mambalam",
+  "version": "1.0.0",
+  "description": "SM Studio Fine-Art Photography Atelier Website",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve -l 5050",
+    "deploy": "vercel --prod"
+  },
+  "keywords": ["photography", "wedding", "mambalam", "chennai", "atelier"],
+  "author": "SM Studio",
+  "license": "MIT"
+}
