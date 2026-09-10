@@ -1,8 +1,16 @@
 /* Custom CSS for SM Studio Atelier Website */
 
-/* Smooth scrolling */
 html {
   scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  display: block;
 }
 
 /* Custom Scrollbar */
@@ -19,6 +27,61 @@ html {
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #c5a880;
+}
+
+@media (max-width: 1023px) {
+  .ba-slider-container {
+    aspect-ratio: 16 / 11;
+  }
+
+  .filter-btn {
+    font-size: 0.65rem;
+    letter-spacing: 0.12em;
+  }
+}
+
+@media (max-width: 767px) {
+  html {
+    font-size: 15px;
+  }
+
+  body {
+    min-width: 0;
+  }
+
+  [class*="max-w-["] {
+    max-width: 100%;
+  }
+
+  .ba-slider-container {
+    aspect-ratio: 4 / 5;
+  }
+
+  .toast-notification {
+    left: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+  }
+
+  .portfolio-item .absolute.bottom-6,
+  .portfolio-item .absolute.top-6 {
+    left: 1rem;
+    right: 1rem;
+  }
+
+  .portfolio-item .absolute.bottom-6 {
+    bottom: 1rem;
+  }
+
+  .portfolio-item .absolute.top-6 {
+    top: 1rem;
+  }
+
+  #chiaroscuro-section .flex.items-center.justify-between,
+  .text-outline.font-label-caps-sm {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
 }
 
 /* Before / After Slider Styling */

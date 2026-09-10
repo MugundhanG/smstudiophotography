@@ -136,10 +136,10 @@
 
   <!-- HEADER -->
   <header class="fixed top-0 inset-x-0 z-50 bg-surface-container-lowest/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
-    <div class="h-20 max-w-[1520px] mx-auto px-margin-mobile lg:px-margin-desktop flex items-center justify-between">
-      <div class="flex items-center gap-4">
-        <img alt="SM Studio Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1V5AYScgFkOSYZMqhYbOeSCEbX14hMfgsiXxbtcoSh2fBckJV9cA8upSrjd4LFkLpFaOn6tCe-7yDXHm0TUIOXZvNlGZtB7RNmNq_09MxZ4DRCxBj-t6CZc6Nu3Y5xGAGddnY_T1X_92w14fsK8DuN7TnUnWR1jKbSZi5KH79ykyAtkyNn56urWIzZb3F5N0k9ytsnLtxdPs-3Ul8tzpSFmq_BnSJq41NXqI_7kp9JTY0fgOwuon4os44s"/>
-        <a class="flex flex-col" href="#">
+    <div class="h-20 max-w-[1520px] mx-auto px-margin-mobile lg:px-margin-desktop flex items-center justify-between gap-3">
+      <div class="flex items-center gap-3 min-w-0">
+        <img alt="SM Studio Logo" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1V5AYScgFkOSYZMqhYbOeSCEbX14hMfgsiXxbtcoSh2fBckJV9cA8upSrjd4LFkLpFaOn6tCe-7yDXHm0TUIOXZvNlGZtB7RNmNq_09MxZ4DRCxBj-t6CZc6Nu3Y5xGAGddnY_T1X_92w14fsK8DuN7TnUnWR1jKbSZi5KH79ykyAtkyNn56urWIzZb3F5N0k9ytsnLtxdPs-3Ul8tzpSFmq_BnSJq41NXqI_7kp9JTY0fgOwuon4os44s"/>
+        <a class="flex flex-col min-w-0" href="#">
           <span class="font-title-editorial text-title-editorial text-on-surface uppercase tracking-[0.2em]">SM Studio</span>
           <span class="font-label-caps-sm text-label-caps-sm text-primary uppercase">Mambalam · Atelier</span>
         </a>
@@ -154,8 +154,7 @@
         <a class="font-label-caps-wide text-label-caps-wide text-on-surface-variant hover:text-on-surface transition-colors uppercase" href="#inquiry-section">Contact</a>
       </nav>
       
-      <div class="flex items-center gap-6">
-        <!-- Ambient Soundscape Toggle Button -->
+      <div class="flex items-center gap-3 sm:gap-6 ml-auto">
         <button id="ambient-sound-btn" class="hidden sm:flex items-center gap-2 px-sm py-2xs rounded-full bg-surface-container-high hover:bg-surface-bright transition-colors text-primary font-label-caps-sm text-label-caps-sm uppercase tracking-widest" title="Toggle Ambient Atelier Audio">
           <div class="flex items-center gap-1">
             <span class="sound-bar muted"></span>
@@ -173,8 +172,23 @@
         <a class="hidden sm:inline-flex items-center justify-center px-lg py-xs bg-transparent text-on-surface font-label-caps-wide text-label-caps-wide tracking-widest uppercase transition-all duration-300 hover:bg-primary hover:text-on-primary border border-primary/40" href="#inquiry-section">
           Book a Session
         </a>
+
+        <button id="mobile-menu-toggle" class="xl:hidden inline-flex items-center justify-center w-11 h-11 rounded-full border border-primary/30 bg-surface-container-high text-on-surface hover:bg-surface-bright transition-colors" type="button" aria-label="Toggle navigation" aria-expanded="false">
+          <span class="material-symbols-outlined text-[22px]">menu</span>
+        </button>
       </div>
     </div>
+
+    <nav id="mobile-nav-panel" class="hidden border-t border-outline-variant/30 bg-surface-container-lowest/95 backdrop-blur-xl xl:hidden">
+      <div class="max-w-[1520px] mx-auto px-margin-mobile py-md space-y-2">
+        <a class="block px-md py-sm rounded-md text-on-surface hover:bg-surface-container-high hover:text-primary transition-colors uppercase font-label-caps-wide text-label-caps-wide" href="#featured-portfolio">Stories</a>
+        <a class="block px-md py-sm rounded-md text-on-surface hover:bg-surface-container-high hover:text-primary transition-colors uppercase font-label-caps-wide text-label-caps-wide" href="#about-studio">About</a>
+        <a class="block px-md py-sm rounded-md text-on-surface hover:bg-surface-container-high hover:text-primary transition-colors uppercase font-label-caps-wide text-label-caps-wide" href="#services-section">Services</a>
+        <a class="block px-md py-sm rounded-md text-on-surface hover:bg-surface-container-high hover:text-primary transition-colors uppercase font-label-caps-wide text-label-caps-wide" href="#chiaroscuro-section">Masterclass</a>
+        <a class="block px-md py-sm rounded-md text-on-surface hover:bg-surface-container-high hover:text-primary transition-colors uppercase font-label-caps-wide text-label-caps-wide" href="#estimator-section">Investment</a>
+        <a class="block px-md py-sm rounded-md text-on-surface hover:bg-surface-container-high hover:text-primary transition-colors uppercase font-label-caps-wide text-label-caps-wide" href="#inquiry-section">Contact</a>
+      </div>
+    </nav>
   </header>
 
   <main class="w-full pt-20 bg-background">

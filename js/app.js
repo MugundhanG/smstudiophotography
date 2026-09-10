@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initFormHandler();
   initSmoothScroll();
   initHeroParallax();
+  initMobileMenu();
 });
 
 /* ----------------------------------------------------
@@ -396,6 +397,28 @@ function initSmoothScroll() {
         target.scrollIntoView({ behavior: 'smooth' });
       }
     });
+  });
+}
+
+function initMobileMenu() {
+  const toggle = document.getElementById('mobile-menu-toggle');
+  const panel = document.getElementById('mobile-nav-panel');
+
+  if (!toggle || !panel) return;
+
+  const setOpen = (isOpen) => {
+    panel.classList.toggle('hidden', !isOpen);
+    toggle.setAttribute('aria-expanded', String(isOpen));
+    toggle.innerHTML = isOpen ? '<span class="material-symbols-outlined text-[22px]">close</span>' : '<span class="material-symbols-outlined text-[22px]">menu</span>';
+  };
+
+  toggle.addEventListener('click', () => {
+    const isOpen = toggle.getAttribute('aria-expanded') === 'true';
+    setOpen(!isOpen);
+  });
+
+  panel.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => setOpen(false));
   });
 }
 
